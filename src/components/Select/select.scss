@@ -1,0 +1,68 @@
+@import "../../variables.scss";
+.select {
+  &__container {
+    max-width: 250px;
+    min-width: 170px;
+    width: 100%;
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__button {
+    border: 1px solid $color-text;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 8px 0 8px;
+      border-color: $color-black transparent transparent transparent;
+      transform-origin: center;
+      transition: transform ease 0.1s;
+    }
+    &_open {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 0 7px 2px $shadow-block;
+    background-color: $color-white;
+
+    &_open {
+      display: block;
+    }
+  }
+  &__option {
+    cursor: pointer;
+    line-height: 1.5;
+    transition: background ease 0.2s;
+    padding: 5px 20px;
+    border-bottom: 1px solid $shadow-block;
+    &:hover {
+      background-color: $shadow-block;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "./variables";
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  font-family: serif;
+  .select__wrap {
+    display: flex;
+    margin: 0 auto 30px;
+    flex-wrap: wrap;
+  }
+}

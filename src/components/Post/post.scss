@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+.post {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 7px 2px $shadow-block;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $color-black;
+  flex-wrap: wrap;
+
+  &__wrap-logo {
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__content {
+    width: 100%;
+    min-width: 300px;
+    max-width: 510px;
+  }
+  &__header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+  &__title {
+    font-weight: 700;
+    margin: 0;
+  }
+  &__date {
+    color: $color-text;
+  }
+  &__text {
+    color: $color-text;
+    margin: 0;
+  }
+}
